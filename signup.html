@@ -2,7 +2,7 @@
 <html lang="en">
 
   <head>
-    <title>Adventurous - Log In</title>
+    <title>Adventurous - Sign Up</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -43,50 +43,78 @@
             </div>
           </li>
           <li class="nav-item">
-            <a class="nav-link disabled" href="#" style="">Disabled</a>
+            <a class="nav-link disabled" href="#">Disabled</a>
           </li>
         </ul>
-        <form class="form-inline my-2 my-lg-0">
+        <div class="loggedin-nav">
+          <a class="btn btn-primary" href="index.html" role="button" id="logout_button">Sign Up</a>
+        </div>
+        <div>
           <a class="btn btn-outline-primary" href="login.html" role="button" id="login_button">Log In</a>
-        </form>
-        <form class="form-inline my-2 my-lg-0">
+        </div>
+        <div>
           <a class="btn btn-primary" href="signup.html" role="button" id="signup_button">Sign Up</a>
-        </form>
+        </div>
       </div>
     </nav>
 
+    <div id="signup_div">
+      <h2>Sign up for Adventurous</h2>
+    </div>
 
+    <form id="signup_form" class="main-form-signup" novalidate>
+      <div class="form-group" >
+        <!-- <label for="username">Username</label> -->
+        <input type="text" class="form-control" id="username" placeholder="Username" type="valid" required>
+      <div class="valid-feedback">
+        Looks good!
+      </div>
+      <div class="invalid-feedback" id="username-invalid-feedback">
+        Please choose a username
+      </div>
+      </div>
+      <div class="form-group">
+        <!-- <label for="exampleInputPassword1">Email</label> -->
+        <input type="email" class="form-control" id="email" placeholder="Email" aria-describedby="emailHelp" required>
+        <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
+      <div class="valid-feedback">
+        Looks good!
+      </div>
+      <div class="invalid-feedback" id="email-invalid-feedback">
+        Please enter a valid email address
+      </div>
+      </div>
+      <div class="form-group">
+        <!-- <label for="password">Password</label> -->
+        <input type="password" class="form-control" id="password" placeholder="Password" required>
+      <div class="valid-feedback">
+        Looks good!
+      </div>
+      <div class="invalid-feedback" id="password-invalid-feedback">
+        Please enter a password
+      </div>
+      </div>
+      <button type="button" class="btn btn-primary" id="new_acct_btn">Create a New Account</button>
+    </form>
 
-    <div id="login_div" class="main-div">
-      <h3>Log in to your account</h3>
+<!--     <div id="login_div" class="main-div">
+      <h3>Sign Up for Adventurous</h3>
+      <input type="username" placeholder="Username..." id="username_field" />
       <input type="email" placeholder="Email..." id="email_field" />
       <input type="password" placeholder="Password..." id="password_field" />
 
-      <button onclick="login()">Login to Account</button>
-      <p>Don't have an account?     <a href="signup.html">Sign up here!</a></p>
-    </div>
+      <button onclick="create_account()" id="new_acct_btn">Create a New Account</button>
+    </div> -->
 
     <div id="user_div" class="loggedin-div">
       <h3>Welcome User</h3>
       <p id="user_para">Welcome to Firebase web login Example. You're currently logged in.</p>
       <button onclick="logout()">Logout</button>
+      <button onclick="send_verification()" id="verify_btn">Send Verification</button>
     </div>
 
   	<script src="https://www.gstatic.com/firebasejs/5.7.0/firebase.js"></script>
-  	<script>
-  	  // Initialize Firebase
-  	  var config = {
-  	    apiKey: "AIzaSyDX4St5GDsNf2ATxHetgcD9v1fsYCzVzeI",
-  	    authDomain: "adventurous-86e40.firebaseapp.com",
-  	    databaseURL: "https://adventurous-86e40.firebaseio.com",
-  	    projectId: "adventurous-86e40",
-  	    storageBucket: "adventurous-86e40.appspot.com",
-  	    messagingSenderId: "175221428743"
-  	  };
-  	  firebase.initializeApp(config);
-  	</script>
-  	
-    	<script src="index.js"></script>
+  	<script src="signup.js"></script>
 
   </body>
 </html>

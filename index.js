@@ -31,7 +31,7 @@ firebase.auth().onAuthStateChanged(function(user) {
     // No user is signed in.
 
     document.getElementById("user_div").style.display = "none";
-    document.getElementById("login_div").style.display = "block";
+    //document.getElementById("login_div").style.display = "block";
 
   }
 });
@@ -88,3 +88,23 @@ function logout(){
   firebase.auth().signOut();
 }
 
+(function() {
+  'use strict';
+  window.addEventListener('load', function() {
+    // Fetch all the forms we want to apply custom Bootstrap validation styles to
+    var forms = document.getElementsByClassName('main-form-signup');
+    // Loop over them and prevent submission
+    var validation = Array.prototype.filter.call(forms, function(form) {
+      form.addEventListener('submit', function(event) {
+        if (form.checkValidity() === false) {
+          event.preventDefault();
+          event.stopPropagation();
+        }
+        else{
+          console.log("all good")
+        }
+        form.classList.add('was-validated');
+      }, false);
+    });
+  }, false);
+})();

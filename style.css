@@ -11,7 +11,7 @@ input, button {
   font-weight: 700;
 }
 
-.main-div, .loggedin-div {
+.main-div, .loggedin-div{
   width: 20%;
   margin: 0px auto;
   margin-top: 150px;
@@ -19,6 +19,68 @@ input, button {
   display: none;
 }
 
+.main-form-signup {
+  width: 350px;
+  margin: 0px auto;
+  margin-top: 20px;
+  padding: 10px;
+}
+
+#signup_div {
+  width: 350px;
+  margin: 0px auto;
+  margin-top: 150px;
+  padding: 0px;
+}
+
+.main-form-signup input {
+  display: block;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background: #fff;
+  padding: 10px;
+  outline: none;
+  width: 100%;
+  margin-bottom: 0px;
+  transition: 0.3s;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+
+}
+
+.was-validated input:valid {
+  display: block;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background: #fff;
+  padding: 10px;
+  outline: none;
+  width: 100%;
+  margin-bottom: 0px;
+  transition: 0.3s;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+
+}
+
+.was-validated input:invalid {
+  display: block;
+  border: 1px solid #AA3939;
+  border-radius: 5px;
+  background: #fff;
+  padding: 10px;
+  outline: none;
+  width: 100%;
+  margin-bottom: 0px;
+  transition: 0.3s;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+}
+
+.main-form-signup label {
+  font-size: 20px;
+  margin-bottom: 5px;
+}
 
 .main-div input {
   display: block;
@@ -57,4 +119,14 @@ input, button {
   color: #5d8ffc;
   border: 1px solid #5d8ffc;
   cursor: pointer;
+}
+
+#login_button {
+  margin-right: 5px;
+
+}
+
+#signup_button {
+  margin-left: 5px;
+
 }
